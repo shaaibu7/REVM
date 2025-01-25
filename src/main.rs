@@ -1,9 +1,12 @@
 mod evm;
 
+use crate::evm::opcodes::opcode;
 use evm::stackop::stack::Stack;
 use evm::memory::memory::SimpleMemory;
 use evm::storage::storage::Storage;
 use evm::state::state::State;
+
+
 
 
 
@@ -69,5 +72,6 @@ fn main() {
     let state: State<u32> = State::new(sender, program, gas, value, Some(vec![1, 2, 3]));
 
     println!("{:?}", state.sender);
+    println!("{}", opcode::CREATE2)
 
 }
