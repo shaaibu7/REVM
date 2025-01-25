@@ -1,4 +1,6 @@
 pub mod memory {
+
+    #[derive(Debug)]
     pub struct SimpleMemory {
         memory: Vec<u8>,
     }

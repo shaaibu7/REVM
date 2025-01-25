@@ -22,6 +22,7 @@ pub mod storage {
         }
     }
 
+    #[derive(Debug)]
     pub struct Storage {
         kv_store: KeyValue,
         cache: HashSet<String>
